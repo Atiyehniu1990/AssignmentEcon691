@@ -1,6 +1,6 @@
-#our script for API work in Econ691
-#Created by Atiyeh Hasanian
-#Created on November 14,2023
+#our script for Homework1
+#Created by: Atiyeh Hasanian
+#Created on: November 29,2023
 
 #rm(list=ls())
 
