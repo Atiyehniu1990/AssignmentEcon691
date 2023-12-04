@@ -68,7 +68,7 @@ for(i in years){
 }
 
 
-#Part3
+#Part3, Regressing the models
 
 mod1 <- lm(Affordable ~ Population + per_und18 + per_ovr64 + per_blk + per_asn + per_oth + per_mort + Med_Cost,
            data = core)
@@ -88,7 +88,7 @@ mod4.2 <- lm(Rent_Share ~ Population + per_und18 + per_ovr64 + per_blk + per_asn
             data = CORE)
 
 #Part4
-
+#Table of results in (html)
 
 model_list <- list(mod1, mod2, mod3.1, mod3.2,mod4.1, mod4.2)
 
@@ -100,7 +100,8 @@ stargazer(core,CORE,type="html", title="Table 1 = summary statistics", out="tabl
 writeLines(html_table,"regression_models_table.html")
 
 browseURL("regression_models_table.html")
-#latex
+
+# Table of results in (latex)
           
 model_list <- list(mod1, mod2, mod3.1, mod3.2,mod4.1, mod4.2)
 
@@ -111,7 +112,7 @@ stargazer(core,CORE,type="latex", title="Table 1 = summary statistics", out="tab
 
 writeLines(latex_table,"regression_models_table.latex")
 
-browseURL("regression_models_table.html"          
+browseURL("regression_models_table.html")          
           
           
 
