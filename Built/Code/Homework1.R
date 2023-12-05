@@ -40,16 +40,16 @@ core <- acs %>%
 
 #Part 3, first one: a map of states
 
-
 ggplot(core)+
- geom_sf(aes(fill=Affordable)) 
-
+  geom_sf(aes(fill=Affordable))+
+    scale_fill_gradient2()+ 
+        theme_bw()
 
 # Part 3, second map 
 
 ggplot(core)+
   geom_sf(aes(fill=Med_Inc))+
-   theme_bw()
+    theme_bw()
 
 
 #Part 3, third map
@@ -57,6 +57,7 @@ ggplot(core)+
 ggplot(core)+
  geom_sf(aes(fill=Med_Rent))+
   theme_bw()
+    
   
 
 
