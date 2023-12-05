@@ -38,28 +38,25 @@ core <- acs %>%
          Affordable=0.33-Afford)
 
 
-#Part 3.a: a map of states
+#Part 3, first one: a map of states
 
 
 ggplot(core)+
- geom_sf(aes(fill=Afford)) 
+ geom_sf(aes(fill=Affordable)) 
 
-#Part 3.b.1, first map
 
-ggplot(core) +
-  geom_sf(aes(fill = Affordable))+     
-  scale_fill_gradient2()+ 
+# Part 3, second map 
+
+ggplot(core)+
+  geom_sf(aes(fill=Med_Inc))+
+   theme_bw()
+
+
+#Part 3, third map
+
+ggplot(core)+
+ geom_sf(aes(fill=Med_Rent))+
   theme_bw()
-
-# Part 3.b.2, second map 
-
-ggplot(core)+
-  geom_sf(aes(fill=Med_Inc))          
-
-
-#Part 3.b.3, third map
-
-ggplot(core)+
- geom_sf(aes(fill=Med_Rent))      
+  
 
 
